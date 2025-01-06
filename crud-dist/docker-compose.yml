@@ -1,0 +1,24 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: crud-postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypostgres
+    ports:
+      - "5435:5432"
+    volumes:
+      - my-postgres-data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    volumes:
+      - ./output:/app/output
+    command:
+      sh -c "unzip dist.zip -d output && node output/dist/index.js" #
+volumes:
+  my-postgres-data:
