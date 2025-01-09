@@ -1,0 +1,40 @@
+###
+
+GET http://localhost:5000/setup
+
+###
+###
+
+GET http://localhost:5000/getDetails
+
+###
+
+POST http://localhost:5000/post
+Content-Type: application/json
+
+ {
+    "name": "aravind s s",
+    "place": "pattom"
+}
+
+###
+
+###
+
+PUT  http://localhost:5000/update/1
+Content-Type: application/json
+
+ {
+    "name": "ammu",
+    "place": "nedumangad"
+}
+
+###
+
+###
+
+DELETE  http://localhost:5000/delete/1
+Content-Type: application/json
+
+###
+
