@@ -11,8 +11,7 @@ pool.connect().then(()=> {
     console.log("connected to database code");  
 })
 .catch((err: any)=>{
-    console.error("Database connection error" , err);
-    
+    console.error("Database connection error" , err);  
 })
 
 module.exports = pool
