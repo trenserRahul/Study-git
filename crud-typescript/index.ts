@@ -4,7 +4,7 @@ const app = express();
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 app.use(express.json());
-const port = 5000;
+const port = process.env.PORT;
 
 const name:string ="ram";
 const password:number=12345
